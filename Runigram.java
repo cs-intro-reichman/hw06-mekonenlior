@@ -7,10 +7,11 @@ import java.awt.Color;
 public class Runigram {
 
 	public static void main(String[] args) {
-		// ...
+		
 	}
 
-	// This method reads data from a PPM file and stores it in a 2D array of color objects.
+	// This method reads data from a PPM file and stores it in a 2D array of color
+	// objects.
 	public static Color[][] read(String fileName) {
 		In in = new In(fileName);
 		// Reads the file header, ignoring the first and the third lines.
@@ -52,7 +53,7 @@ public class Runigram {
 		}
 	}
 
-	//  Produces a horizontally flipped version of the given image.
+	// Produces a horizontally flipped version of the given image.
 	public static Color[][] flippedHorizontally(Color[][] image) {
 		Color[][] fhImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image.length; i++) {
@@ -96,7 +97,7 @@ public class Runigram {
 		return gsImage;
 	}
 
-	//  Scales (resizes) the given image to the specified width and height.
+	// Scales (resizes) the given image to the specified width and height.
 	public static Color[][] scaled(Color[][] image, int width, int height) {
 		Color[][] scaled = new Color[height][width];
 		double x = (double) image[0].length / width;
@@ -128,7 +129,8 @@ public class Runigram {
 		return blended;
 	}
 
-	// Morphs a source image into a target image gradually over a specified number of steps, displaying each intermediate step.
+	// Morphs a source image into a target image gradually over a specified number
+	// of steps, displaying each intermediate step.
 	public static void morph(Color[][] source, Color[][] target, int n) {
 		Color[][] morphed = new Color[source.length][source[0].length];
 		for (int i = 0; i < n; i++) {

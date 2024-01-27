@@ -7,24 +7,7 @@ import java.awt.Color;
 public class Runigram {
 
 	public static void main(String[] args) {
-
-		//// Hide / change / add to the testing code below, as needed.
-
-		// Tests the reading and printing of an image:
-		Color[][] tinypic = read("tinypic.ppm");
-		print(tinypic);
-
-		// Creates an image which will be the result of various
-		// image processing operations:
-		Color[][] imageOut;
-
-		// Tests the horizontal flipping of an image:
-		imageOut = flippedHorizontally(tinypic);
-		System.out.println();
-		print(imageOut);
-
-		//// Write here whatever code you need in order to test your work.
-		//// You can reuse / overide the contents of the imageOut array.
+		
 	}
 
 	/**
@@ -57,7 +40,7 @@ public class Runigram {
 	}
 
 	// Prints the RGB values of a given color.
-	private static void print(Color c) {
+	public static void print(Color c) {
 		System.out.print("(");
 		System.out.printf("%3s,", c.getRed()); // Prints the red component
 		System.out.printf("%3s,", c.getGreen()); // Prints the green component
@@ -71,7 +54,7 @@ public class Runigram {
 	// For example, to check that some image processing function works correctly,
 	// we can apply the function and then use this function to print the resulting
 	// image.
-	private static void print(Color[][] image) {
+	public static void print(Color[][] image) {
 		int numRows = image.length;
 		int numCols = image[0].length;
 		for (int i = 0; i < numRows; i++) {

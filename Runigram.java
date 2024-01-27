@@ -7,7 +7,7 @@ import java.awt.Color;
 public class Runigram {
 
 	public static void main(String[] args) {
-		
+		//...
 	}
 
 	/**
@@ -23,8 +23,8 @@ public class Runigram {
 		in.readInt();
 		// Creates the image array
 		Color[][] image = new Color[numRows][numCols];
-		for (int i = 0; i < numCols; i++) {
-			for (int j = 0; j < numRows; j++) {
+		for (int i = 0; i < numRows; i++) {
+			for (int j = 0; j < numCols; j++) {
 				int red = in.readInt();
 				int green = in.readInt();
 				int blue = in.readInt();

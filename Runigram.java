@@ -7,7 +7,7 @@ import java.awt.Color;
 public class Runigram {
 
 	public static void main(String[] args) {
-		//...
+		// ...
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Runigram {
 	public static Color[][] flippedHorizontally(Color[][] image) {
 		Color[][] fhImage = new Color[image.length][image[0].length];
 		for (int i = 0; i < image.length; i++) {
-			for (int j = 0; j < image[0].length; j++) {
+			for (int j = image[0].length - 1; j >= 0; j--) {
 				fhImage[i][image[0].length - 1 - j] = image[i][j];
 			}
 		}
@@ -84,7 +84,7 @@ public class Runigram {
 	 */
 	public static Color[][] flippedVertically(Color[][] image) {
 		Color[][] fvImage = new Color[image.length][image[0].length];
-		for (int i = 0; i < image.length; i++) {
+		for (int i = image.length - 1; i >= 0; i--) {
 			for (int j = 0; j < image[0].length; j++) {
 				fvImage[image.length - 1 - i][j] = image[i][j];
 			}
